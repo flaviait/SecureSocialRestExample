@@ -1,7 +1,7 @@
 package filters
 
 import controllers.Default
-import play.api.mvc.{SimpleResult, RequestHeader, Filter}
+import play.api.mvc.{Result, RequestHeader, Filter}
 
 /**
  * Author: Dennis Fricke
@@ -17,7 +17,7 @@ case class CORSFilter() extends Filter{
 			r.headers.get("Access-Control-Request-Method").nonEmpty
 		)
 
-	def apply(f: (RequestHeader) => Future[SimpleResult])(request: RequestHeader): Future[SimpleResult] = {
+	def apply(f: (RequestHeader) => Future[Result])(request: RequestHeader): Future[Result] = {
 		if (isPreFlight(request)) {
 			Future.successful(Default.Ok.withHeaders(
 				"Access-Control-Allow-Origin" -> allowedDomain.orElse(request.headers.get("Origin")).getOrElse(""),
