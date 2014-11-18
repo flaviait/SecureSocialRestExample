@@ -1,0 +1,31 @@
+/* Products */
+
+[
+    {
+        "description": "Pink Panties",
+        "price": 129.99,
+        "comments": [
+            {
+                "username": "john.doe",
+                "text": "This is really pink!"
+            }
+        ],
+        "created": "2014-01-01 01:00:00"
+    },
+    {
+        "description": "Handtasche Basic",
+        "price": 69.99,
+        "comments": [
+            {
+                "username": "john.doe",
+                "text": "This is awesome"
+            }
+        ],
+        "created": "2014-01-01 01:00:00"
+    },
+    {
+        "description": "Rocket Panties",
+        "price": 369.99,
+        "created": "2014-01-01 01:00:00"
+    }
+]
